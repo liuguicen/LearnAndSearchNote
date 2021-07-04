@@ -2,6 +2,9 @@
 将Tanh层作为生成器最后输出层
 现在流行使用PixelNorm和InstanceNorm[3]，如果要用BN的话，只能在all-fake或all-real的mini-batch中使用。
 
+# 使用leakyRelu不要使用relu
+如果我们的像素值是在-1~1之间，relu直接就把像素截断，
+你最后一层要求数据在-1~1，好嘛，前面的数据
 
 # 数据增强 似乎很有用
 一些论文里面提到
